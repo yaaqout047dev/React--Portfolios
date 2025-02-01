@@ -1,0 +1,93 @@
+header{
+  height: 100vh;
+  padding-top: 7rem;
+  overflow: hidden;
+}
+.header__container{
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+
+/* --------- #Cta .---------- */
+.cta{
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;  
+}
+
+/* ----------#Header Social . ------------- */
+
+.header__socials{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .8rem;
+  position: absolute;
+  left: 0;
+  bottom: 3rem;
+}
+.header__socials::after{
+  content: '';
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+}
+/* -------- #Me ----------- */
+
+.me{
+  background: linear-gradient(#eeebf1c6 , transparent);
+  width: 22rem;
+  height: 22rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: .9s ease;
+  /* padding: 5rem 1.5rem 1.5rem 1.5rem; */
+}
+.me:hover{
+  border: 3px solid #ed2222c6;
+}
+.me img{
+  background-position: center;
+  background-size: cover;
+  width:20rem;
+  height: 22rem;
+  border-radius: 50%;
+  transition: .4s;
+}
+.me:hover img{
+  width: 22rem;
+}
+
+/* ------------ #Scroll Down ----------- */
+
+.scroll__down{
+  position: absolute;
+  right: -2.3rem;
+  bottom: 5rem;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: .9rem;
+}
+
+/* =================== #Media queries (Medium Devices) ============ */
+@media(max-width:1024px){
+  header{
+    height: 68vh;
+  }
+}
+
+/* =================== #Media queries (Small Devices) ============ */
+@media (max-width:600px){
+  header{
+    height: 100vh;
+  }
+  .header__socials , .scroll__down{
+    display: none;
+  }
+}
